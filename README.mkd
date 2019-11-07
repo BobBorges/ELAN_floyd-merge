@@ -1,0 +1,35 @@
+# ELAN_floyd-merge.py
+
+This is a script to merge elan projects end-to-end. 
+
+There are a number of conditions that must be met in order for the script to work properly. They are:
+
+* `.eaf` files that have the same tier structure
+* `.wav` files that have the same properties (stereo/mono, frame/bit rate, etc)
+* projects must be contained in a suitable directory structure (see below)
+
+If these conditions aren't met, the script will generate unpredictable output or faile completely.
+
+## Pre Floyd-merge directory structure
+
+		* to_be_merged
+			* file_1
+				* file_1.eaf
+				* file_1.wav
+			* file_2
+				* file_2.eaf
+				* file_2.wav
+			* file_3
+				* file_3.eaf
+				* file_3.wav
+			* file_4
+				* file_4.eaf
+				* file_4.wav
+				
+## Usage
+
+* Prepare to-be-merged projects according to the above pattern.
+* Run `ELAN_floyd-merge.py`
+* Enter the full absolute path to the `to_be_merged` directory.
+* Enter a name for the result
+
