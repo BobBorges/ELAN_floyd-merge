@@ -12,7 +12,7 @@ If these conditions aren't met, the script will generate unpredictable output or
 
 ## Pre Floyd-merge directory structure
 
-		* to_be_merged
+		* to-merge
 			* file_1
 				* file_1.eaf
 				* file_1.wav
@@ -25,11 +25,71 @@ If these conditions aren't met, the script will generate unpredictable output or
 			* file_4
 				* file_4.eaf
 				* file_4.wav
-				
+
+## Caveats
+
+There are some cases where I would expect the script to run into problems.
+
+* The test projects used the default tier type and symbolic association between tiers. Other tier constraints might / will probably cause problems. Feel free to adapt the code or send me an example `.eaf` using other constraints and I can figure out how to make it work.
+* Windows: I tested everything on a box running linux. In principle it should work the same way on a mac. Windows does funny stuff with path names and I have no idea how Elan manages paths in Windows. If you try this on windows and it works, pls let me know, otherwise, send me your `.eaf`
+
 ## Usage
 
 * Prepare to-be-merged projects according to the above pattern.
-* Run `ELAN_floyd-merge.py`
+* Run `ELAN_floyd-merge.py` with Python 3
 * Enter the full absolute path to the `to_be_merged` directory.
 * Enter a name for the result
+
+### Modules
+
+There are a few modules that need to be accessible.
+
+* contextlib
+* datetime
+* functools
+* os
+* AudioSegment from pydub
+* time
+* wave
+* xml.etree.ElementTree
+
+If you don't know if you have these, just run the script -- you'll get an error if something is missing :D Google how to install those modules on your system.
+
+Other modules are included with the repo as `.py` files.
+
+* optimize_tier_ids
+* optimize_xml_formatting
+* welcome
+
+Make sure they live in the same directory as `ELAN_floyd-merge.py`, otherwise nothing will work.
+
+### But how do I "run" a `.py'
+
+Open your Terminal app `cd` to the directory where `ELAN_floyd-merge.py` is saved and enter:
+
+        python --version
+
+If it answers "version 3.something", just enter
+
+        python ELAN_floyd-merge.py
+
+and follow the prompts.
+
+If your `python --version` command returns "version 2.something", try
+
+        python3 --version
+
+If that gets you info that you have "version 3.something", just enter
+
+        python3 ELAN_floyd-merge.py
+
+and follow the prompts. Otherwise, google how to install Python 3 on your system and come back after you get it working.
+
+## License
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
