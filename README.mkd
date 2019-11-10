@@ -40,6 +40,10 @@ There are some cases where I would expect the script to run into problems.
 * Enter the full absolute path to the `to_be_merged` directory.
 * Enter a name for the result
 
+A new directory will be generated inside the `to-merge` directory where the merged `.wav` and `.eaf` files will be deposited.
+
+You will probably have to use the "open with another program" option to open the new `.eaf` file the first time (and until it is overwritten by Elan).
+
 ### Modules
 
 There are a few modules that need to be accessible.
