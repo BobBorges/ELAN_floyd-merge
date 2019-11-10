@@ -1,0 +1,3 @@
+# DEBUG
+
+These are the same scripts, but some print statements left in. This might help if something isn't going right.

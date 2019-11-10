@@ -1,0 +1,5 @@
+# Elan projects for testing the code
+
+The audio in the example projects comes from the [Fiszki starter Kaszubski](https://www.fiszki.pl/jezyki/kaszubski/), examples 13, 17, 34, and 38.
+
+Example projects have a tiers with the default tier type as well as symbolic association. 
