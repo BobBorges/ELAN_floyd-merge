@@ -1,6 +1,6 @@
 # ELAN_floyd-merge.py
 
-This is a script to merge elan projects end-to-end. 
+This is a script to merge elan projects in sequence. 
 
 There are a number of conditions that must be met in order for the script to work properly. They are:
 
@@ -31,7 +31,8 @@ If these conditions aren't met, the script will generate unpredictable output or
 There are some cases where I would expect the script to run into problems.
 
 * The test projects used the default tier type and symbolic association between tiers. Other tier constraints might / will probably cause problems. Feel free to adapt the code or send me an example `.eaf` using other constraints and I can figure out how to make it work.
-* Windows: I tested everything on a box running linux. In principle it should work the same way on a mac. Windows does funny stuff with path names and I have no idea how Elan manages paths in Windows. If you try this on windows and it works, pls let me know, otherwise, send me your `.eaf`
+* Windows: I tested everything on a box running linux. In principle it should work the same way on a mac. Windows does funny stuff with path names and I have no idea how Elan manages paths in Windows. If you try this on windows and it works, pls let me know, otherwise, send me your `.eaf`.
+* Before you run this or any script on your elan projects, back them up, or make copies of the projects first.
 
 ## Usage
 
@@ -88,6 +89,13 @@ If that gets you info that you have "version 3.something", just enter
         python3 ELAN_floyd-merge.py
 
 and follow the prompts. Otherwise, google how to install Python 3 on your system and come back after you get it working.
+
+## Contents of this repo
+
+The main scripts are in the root directory.
+
+* DEBUG contains the same scripts, but with a bunch of print statements, which may help you figure out a problem if somethign is going wrong.
+* to-merge contains a test data set. I'd suggest running on this set first to make sure everything works as it should
 
 ## License
 
